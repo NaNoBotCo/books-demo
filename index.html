@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Books</title>
+<meta name="description" content="Double-entry books in a browser with a sample company in them: baht or riel, English with Thai or Khmer, five sets of books.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Books — sample books in Thai baht or Cambodian riel">
+<meta property="og:description" content="Invoices, withholding, stock, payroll and the filing calendar for a small desk. Pick Thailand or Cambodia; EN / ไทย / ខ្មែរ. Sample data.">
+<meta property="og:url" content="https://nanobotco.github.io/books-demo/">
+<meta property="og:image" content="https://nanobotco.github.io/books-demo/screenshots/thailand.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://nanobotco.github.io/books-demo/screenshots/thailand.jpg">
+<link rel="stylesheet" href="app/ui.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231f6f5c'/></svg>">
+</head>
+<body>
+<div class="app" id="app">
+  <aside class="side">
+    <div class="brand">
+      <div class="mark" id="brand-mark">ED</div>
+      <div class="brand-text">
+        <div class="name" id="brand-name">Example Desk Co., Ltd.</div>
+        <div class="sub" id="brand-sub">Chiang Rai</div>
+      </div>
+    </div>
+    <div class="switcher"><select id="entity-pick" aria-label="Books"></select></div>
+    <div class="switcher"><select id="country-pick" aria-label="Country">
+      <option value="TH">Thailand · ฿ · EN / ไทย</option>
+      <option value="KH">Cambodia · ៛ · EN / ខ្មែរ</option>
+    </select></div>
+    <nav id="nav"></nav>
+    <div class="side-foot">
+      <span class="chip"><span class="dot"></span><span id="sample-label">Sample data</span>
+        <button class="btn small quiet" id="reset">Start over</button></span>
+      <button class="btn small" id="search-open" title="/">⌕</button>
+      <button class="btn small" id="lang">ไทย</button>
+    </div>
+  </aside>
+  <main class="main" id="main">
+    <div class="head"><h1 id="loading">…</h1></div>
+  </main>
+</div>
+<dialog id="dlg"></dialog>
+<script src="vendor/sql-asm.js"></script>
+<script type="module" src="app/main.mjs"></script>
+</body>
+</html>
